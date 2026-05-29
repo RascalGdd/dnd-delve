@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D20 Delve</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero-panel" aria-labelledby="game-title">
+      <div>
+        <p class="eyebrow">Solo fantasy dungeon crawler</p>
+        <h1 id="game-title">D20 Delve</h1>
+        <p class="intro">
+          Pick an adventurer, enter the lantern-lit ruin, roll a d20 for risky choices,
+          and survive five rooms before the vault wakes up.
+        </p>
+      </div>
+
+      <div class="party-select" id="party-select" aria-label="Choose your adventurer"></div>
+    </section>
+
+    <section class="play-area" aria-label="Game board">
+      <aside class="sheet-panel" aria-label="Character sheet">
+        <div class="portrait" id="portrait">?</div>
+        <div>
+          <p class="label">Adventurer</p>
+          <h2 id="hero-name">Choose a hero</h2>
+          <p id="hero-class">The dungeon is waiting.</p>
+        </div>
+
+        <div class="meters">
+          <div>
+            <div class="meter-header">
+              <span>HP</span>
+              <span id="hp-text">0 / 0</span>
+            </div>
+            <div class="meter"><span id="hp-bar"></span></div>
+          </div>
+          <div>
+            <div class="meter-header">
+              <span>Focus</span>
+              <span id="focus-text">0 / 0</span>
+            </div>
+            <div class="meter focus"><span id="focus-bar"></span></div>
+          </div>
+        </div>
+
+        <div class="stat-grid" id="stat-grid"></div>
+
+        <div class="inventory">
+          <p class="label">Inventory</p>
+          <ul id="inventory-list"></ul>
+        </div>
+      </aside>
+
+      <section class="encounter-panel" aria-live="polite">
+        <div class="map-strip" id="map-strip"></div>
+
+        <div class="room-card">
+          <div class="room-art" id="room-art"></div>
+          <div class="room-copy">
+            <p class="label" id="room-label">Room 0</p>
+            <h2 id="room-title">Choose your adventurer</h2>
+            <p id="room-description">
+              Each hero changes the odds. The knight is steady, the rogue bends luck,
+              and the mystic turns focus into survival.
+            </p>
+          </div>
+        </div>
+
+        <div class="action-grid" id="action-grid"></div>
+
+        <div class="dice-tray">
+          <div class="die" id="die">20</div>
+          <div>
+            <p class="label">Last roll</p>
+            <p id="roll-summary">No roll yet.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="log-panel" aria-label="Adventure log">
+        <div class="log-header">
+          <p class="label">Adventure log</p>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+        <ol id="log-list"></ol>
+      </aside>
+    </section>
+  </main>
+
+  <script src="src/game.js"></script>
+</body>
+</html>
