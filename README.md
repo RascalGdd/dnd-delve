@@ -1,21 +1,18 @@
-# D20 Delve
+# Lantern Spire
 
-A small standalone browser game inspired by tabletop fantasy dungeon crawls.
+An original browser roguelike deckbuilder prototype inspired by the broad genre
+loop of map routing, turn-based card combat, deck rewards, relics, shops, rest
+sites, elite fights, and a final boss.
 
-Pick one of three adventurers, clear five rooms, roll a d20 for risky checks,
-manage HP and focus, collect odd relics, and try to escape the waking vault.
+## Play
 
-## Play locally
+Open `index.html` directly or visit the deployed GitHub Pages site.
 
-Open `index.html` in a browser.
+## Current Features
 
-No build step or package install is required.
-
-## Features
-
-- Three playable classes with different stats
-- d20 checks with difficulty classes
-- Automatic focus spend when it can save a bad roll
-- Five-room dungeon path
-- HP, focus, inventory, map progress, and adventure log
-- Responsive static UI
+- Three playable climbers with different starting decks and relics
+- Branching route map with monsters, elites, events, shops, rest sites, treasure, and boss
+- Turn-based card combat with draw pile, hand, discard pile, exhaust pile, energy, block, strength, weak, and vulnerable
+- Card rewards, upgrades, removals, healing, relic rewards, and shop purchases
+- Original static visuals using CSS and inline-generated card art
+- No build step or dependency install required
